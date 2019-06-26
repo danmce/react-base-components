@@ -42,7 +42,8 @@ module.exports = {
       utils: path.resolve(__dirname, 'src/utils'),
       routes: path.resolve(__dirname, 'src/routes'),
       views: path.resolve(__dirname, 'src/views'),
-      src: path.resolve(__dirname, 'src')
+      src: path.resolve(__dirname, 'src'),
+      styles: path.resolve(__dirname, 'src/styles')
     }
   }
 }

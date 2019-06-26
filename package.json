@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "uxpin": "uxpin-merge --webpack-config ./webpack.common.js --wrapper ./src/UXPinWrapper/UXPinWrapper.js"
+    "uxpin": "uxpin-merge --webpack-config ./webpack.common.js --wrapper ./src/views/UXPinWrapper/UXPinWrapper.js"
   },
   "author": "",
   "license": "ISC",
