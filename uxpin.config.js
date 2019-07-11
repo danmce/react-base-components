@@ -3,7 +3,7 @@ module.exports = {
     categories: [
       {
         name: 'General',
-        include: ['src/Components/Button/Button.js']
+        include: ['src/components/Button/Button.js']
       }
     ]
   },
