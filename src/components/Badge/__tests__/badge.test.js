@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json'
 import Badge from '../Badge'
 import UxPinWrapper from '../../../wrappers/UXPinWrapper'
 
-test('renders error Button correctly', () => {
+test('renders error Badge correctly', () => {
   const button = (
     <UxPinWrapper>
       <Badge text='Test' />
