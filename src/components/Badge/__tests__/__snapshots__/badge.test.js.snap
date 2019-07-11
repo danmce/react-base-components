@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders error Button correctly: enzyme.mount 1`] = `
+.emotion-0 {
+  background-color: red;
+}
+
+<UXPinWrapper>
+  <ThemeProvider
+    theme={
+      Object {
+        "borders": Object {
+          "borderRadius": "3px",
+          "borderStandard": "1px solid",
+          "default": Object {
+            "borderRadius": "3px",
+            "borderStandard": "1px solid",
+          },
+        },
+        "palette": Object {
+          "active": Object {
+            "error": "#af0900",
+            "primary": "#4b626d",
+            "secondary": "#858585",
+            "success": "#487e0a",
+            "warning": "#ff5b07",
+          },
+          "disabled": Object {
+            "background": "#c4c4c4",
+            "border": "#b8b8b8",
+            "color": "#ffffff",
+          },
+          "error": "#e20c00",
+          "hover": Object {
+            "error": "#960800",
+            "primary": "#41545e",
+            "secondary": "#787878",
+            "success": "#3b6608",
+            "warning": "#ed5000",
+          },
+          "primary": Object {
+            "base": "#607d8b",
+            "dark10": "#4b626d",
+            "dark15": "#41545e",
+            "dark20": "#36474f",
+            "dark25": "#2c3940",
+            "dark5": "#566f7c",
+            "light10": "#7b96a3",
+            "light15": "#8aa2ae",
+            "light20": "#99aeb8",
+            "light25": "#a8bac3",
+            "light5": "#6b8a99",
+          },
+          "secondary": Object {
+            "base": "#9e9e9e",
+            "dark10": "#858585",
+            "dark15": "#787878",
+            "dark20": "#6b6b6b",
+            "dark25": "#5e5e5e",
+            "dark5": "#919191",
+            "light10": "#b8b8b8",
+            "light15": "#c4c4c4",
+            "light20": "#d1d1d1",
+            "light25": "#dedede",
+            "light5": "#ababab",
+          },
+          "success": "#63ad0e",
+          "warning": "#ff7d3a",
+        },
+        "typography": Object {
+          "lineHeightMultiplier": Object {
+            "button": 2.6,
+          },
+          "size": Object {
+            "l": 16,
+            "m": 12,
+            "s": 10,
+            "xl": 24,
+            "xs": 8,
+            "xxl": 34,
+            "xxxl": 50,
+          },
+        },
+      }
+    }
+  >
+    <Badge
+      text="Test"
+    >
+      <BadgeStyles>
+        <div
+          className="emotion-0 emotion-1"
+        >
+          Test
+        </div>
+      </BadgeStyles>
+    </Badge>
+  </ThemeProvider>
+</UXPinWrapper>
+`;
