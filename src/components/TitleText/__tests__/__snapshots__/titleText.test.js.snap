@@ -1,45 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders error Button correctly: enzyme.mount 1`] = `
+exports[`renders Typography correctly: enzyme.mount 1`] = `
 .emotion-0 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 0;
-  border-radius: 1rem;
-  color: white;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 8px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  line-height: NaNpx;
-  outline: none;
-  padding: 2rem 4rem;
-  width: auto;
-}
-
-.emotion-0:focus {
-  outline: none;
-}
-
-.emotion-0:disabled {
-  background-color: #17384B;
-  border: 1px solid #2C546C;
-  color: #FFFFFF;
-}
-
-.emotion-0:disabled:hover {
-  box-shadow: none;
+  font-family: 'Helvetica Neue',sans-serif;
+  font-size: 24px;
 }
 
 <UXPinWrapper>
@@ -109,31 +73,15 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       }
     }
   >
-    <Button
-      disabled={false}
-      mode="filled"
-      size="xs"
-      stretched={false}
-      type="error"
-    >
-      <ButtonStyles
-        disabled={false}
-        mode="filled"
-        size="xs"
-        stretched={false}
-        type="error"
-      >
-        <button
+    <TitleText>
+      <Styled(h1)>
+        <h1
           className="emotion-0 emotion-1"
-          disabled={false}
-          mode="filled"
-          size="xs"
-          type="error"
         >
-          Test
-        </button>
-      </ButtonStyles>
-    </Button>
+          Title Text
+        </h1>
+      </Styled(h1)>
+    </TitleText>
   </ThemeProvider>
 </UXPinWrapper>
 `;

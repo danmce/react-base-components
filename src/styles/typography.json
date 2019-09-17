@@ -1,9 +1,7 @@
 {
-    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-    "weight": {
-        "light": 100,
-        "regular": 300,
-        "bold": 600
+    "fontFamily": "'Helvetica Neue', sans-serif",
+    "lineHeightMultiplier": {
+        "button": 2.6
     },
     "size": {
         "xs": 8,
@@ -14,8 +12,9 @@
         "xxl": 34,
         "xxxl": 50
     },
-    "lineHeightMultiplier": {
-        "button": 2.6
+    "weight": {
+        "light": 100,
+        "regular": 300,
+        "bold": 600
     }
-
 }

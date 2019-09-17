@@ -1,43 +1,49 @@
 import * as borders from './borders.json'
-import * as typography from './typography.json'
 import * as colors from './colors.json'
+import * as typography from './typography.json'
 
 export default {
-  palette: {
-    primary: {
-      ...colors.blueGray
-    },
-    secondary: {
-      ...colors.gray
-    },
-    success: colors.green.base,
-    error: colors.red.base,
-    warning: colors.orange.base,
-    active: {
-      primary: colors.blueGray.dark10,
-      secondary: colors.gray.dark10,
-      success: colors.green.dark10,
-      error: colors.red.dark10,
-      warning: colors.orange.dark10
-    },
-    hover: {
-      primary: colors.blueGray.dark15,
-      secondary: colors.gray.dark15,
-      success: colors.green.dark15,
-      error: colors.red.dark15,
-      warning: colors.orange.dark15
-    },
-    disabled: {
-      background: colors.gray.light15,
-      border: colors.gray.light10,
-      color: colors.white
-    }
-  },
   borders: {
     ...borders
   },
+  colors: {
+    button: {
+      primary: {
+        fill: colors.n_500,
+        stroke: colors.n_300,
+        tint: colors.white,
+        case: 'none'
+      },
+      secondary: {
+        fill: 'transparent',
+        stroke: colors.n_300,
+        tint: colors.n_500,
+        case: 'none'
+      },
+      success: {
+        fill: colors.green_500,
+        stroke: colors.green_300,
+        tint: colors.white,
+        case: 'none'
+      },
+      error: {
+        fill: colors.red_500,
+        stroke: colors.red_300,
+        tint: colors.white,
+        case: 'none'
+      },
+      warning: {
+        fill: colors.yellow_500,
+        stroke: colors.yellow_300,
+        tint: colors.white,
+        case: 'none'
+      }
+    }
+  },
   typography: {
-    lineHeightMultiplier: { ...typography.lineHeightMultiplier },
-    size: { ...typography.size }
+    fontFamily: typography.fontFamily,
+    lineHeightMultiplier: { ...typography.lineHeightDivider },
+    size: { ...typography.size },
+    weight: { ...typography.weight }
   }
 }

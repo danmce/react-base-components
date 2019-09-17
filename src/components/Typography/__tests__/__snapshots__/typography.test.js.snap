@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Typography correctly: enzyme.mount 1`] = `
+.emotion-0 {
+  color: #f00;
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+}
+
+.emotion-2 {
+  color: #f00;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+
+.emotion-4 {
+  color: #0f0;
+  text-align: right;
+  font-size: 12px;
+}
+
+<UXPinWrapper>
+  <ThemeProvider
+    theme={
+      Object {
+        "colors": Object {
+          "button": Object {
+            "primary": Object {
+              "case": "none",
+              "fill": "#17384B",
+              "stroke": "#2C546C",
+              "tint": "#FFFFFF",
+            },
+            "secondary": Object {
+              "case": "none",
+              "fill": "transparent",
+              "stroke": "#2C546C",
+              "tint": "#17384B",
+            },
+            "success": Object {
+              "case": "none",
+              "fill": undefined,
+              "stroke": undefined,
+              "tint": "#FFFFFF",
+            },
+          },
+        },
+        "typography": Object {
+          "fontFamily": "'Helvetica Neue', sans-serif",
+          "lineHeightDivider": Object {},
+          "size": Object {
+            "l": 16,
+            "m": 12,
+            "s": 10,
+            "xl": 24,
+            "xs": 8,
+            "xxl": 34,
+            "xxxl": 50,
+          },
+          "weight": Object {
+            "bold": 600,
+            "light": 100,
+            "regular": 300,
+          },
+        },
+      }
+    }
+  >
+    <Component
+      align="center"
+      bold={true}
+      tint="#f00"
+    >
+      <StyledText
+        align="center"
+        bold={true}
+        tag="h1"
+        tint="#f00"
+      >
+        <WithComponent
+          align="center"
+          bold={true}
+          tag="h1"
+          tint="#f00"
+        >
+          <h1
+            className="emotion-0 emotion-1"
+          >
+            Title Text
+          </h1>
+        </WithComponent>
+      </StyledText>
+    </Component>
+    <Component
+      align="center"
+      bold={true}
+      tint="#f00"
+    >
+      <StyledText
+        align="center"
+        bold={true}
+        tag="h2"
+        tint="#f00"
+      >
+        <WithComponent
+          align="center"
+          bold={true}
+          tag="h2"
+          tint="#f00"
+        >
+          <h2
+            className="emotion-2 emotion-1"
+          >
+            Heading Text
+          </h2>
+        </WithComponent>
+      </StyledText>
+    </Component>
+    <Component
+      align="right"
+      tint="#0f0"
+    >
+      <StyledText
+        align="right"
+        tag="p"
+        tint="#0f0"
+      >
+        <WithComponent
+          align="right"
+          tag="p"
+          tint="#0f0"
+        >
+          <p
+            className="emotion-4 emotion-1"
+          >
+            Body Text
+          </p>
+        </WithComponent>
+      </StyledText>
+    </Component>
+  </ThemeProvider>
+</UXPinWrapper>
+`;

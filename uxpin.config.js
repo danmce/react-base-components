@@ -5,7 +5,8 @@ module.exports = {
         name: 'General',
         include: [
           'src/components/Badge/Badge.js',
-          'src/components/Button/Button.js'
+          'src/components/Button/Button.js',
+          'src/components/TitleText/TitleText.js'
         ]
       }
     ]

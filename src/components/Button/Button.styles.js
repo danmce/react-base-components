@@ -5,69 +5,76 @@ const backgroundSelector = (theme, type, mode) => {
   if (!mode) {
     switch (type) {
       case 'primary':
-        return theme.palette.primary.base
+        return theme.colors.button.primary.fill
       case 'secondary':
-        return theme.palette.secondary.base
+        return theme.colors.button.secondary.fill
       case 'success':
-        return theme.palette.success
+        return theme.colors.button.success.fill
       case 'error':
-        return theme.palette.error
+        return theme.colors.button.error.fill
       case 'warning':
-        return theme.palette.warning
+        return theme.colors.button.warning.fill
       default:
-        return theme.palette.primary.base
+        return theme.colors.button.primary.fill
     }
   } else if (mode === 'active') {
+    // TODO
     switch (type) {
       case 'primary':
-        return theme.palette.active.primary
+        return theme.colors.button.primary.fill
       case 'secondary':
-        return theme.palette.active.secondary
+        return theme.colors.button.secondary.fill
       case 'success':
-        return theme.palette.active.success
+        return theme.colors.button.success.fill
       case 'error':
-        return theme.palette.active.error
+        return theme.colors.button.error.fill
       case 'warning':
-        return theme.palette.active.warning
+        return theme.colors.button.warning.fill
       default:
-        return theme.palette.active.primary
+        return theme.colors.button.primary.fill
     }
   } else if (mode === 'hover') {
+    // TODO
     switch (type) {
       case 'primary':
-        return theme.palette.hover.primary
+        return theme.colors.button.primary.fill
       case 'secondary':
-        return theme.palette.hover.secondary
+        return theme.colors.button.secondary.fill
       case 'success':
-        return theme.palette.hover.success
+        return theme.colors.button.success.fill
       case 'error':
-        return theme.palette.hover.error
+        return theme.colors.button.error.fill
       case 'warning':
-        return theme.palette.hover.warning
+        return theme.colors.button.warning.fill
       default:
-        return theme.palette.hover.default
+        return theme.colors.button.primary.fill
     }
   }
 }
 
 const modes = (theme, type, mode) => {
+  // TODO
   if (mode === 'ghost') {
     return css`
       background-color: none;
       color: ${type !== 'secondary'
     ? backgroundSelector(theme, type)
-    : theme.palette.primary.base};
+    : theme.colors.button.primary.fill};
       svg {
         fill: ${type !== 'secondary'
     ? backgroundSelector(theme, type)
-    : theme.palette.primary.base};
+    : theme.colors.button.primary.fill};
       }
       &:hover,
       &:active,
       &:focus {
-        color: ${type !== 'secondary' ? 'white' : theme.palette.primary.base};
+        color: ${type !== 'secondary'
+    ? 'white'
+    : theme.colors.button.primary.fill};
         svg {
-          fill: ${type !== 'secondary' ? 'white' : theme.palette.primary.base};
+          fill: ${type !== 'secondary'
+    ? 'white'
+    : theme.colors.button.primary.fill};
         }
       }
     `
@@ -127,11 +134,12 @@ const ButtonCommon = styled.button`
   }
   &:disabled {
     ${props => {
+    // TODO
     return `
-          background-color: ${props.theme.palette.disabled.background};
+          background-color: ${props.theme.colors.button.primary.fill};
           border: ${props.theme.borders.borderStandard}
-            ${props.theme.palette.disabled.border};
-          color: ${props.theme.palette.disabled.color};
+            ${props.theme.colors.button.primary.stroke};
+          color: ${props.theme.colors.button.primary.tint};
         `
   }}
     &:hover {
