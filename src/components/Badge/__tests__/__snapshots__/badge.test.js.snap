@@ -6,18 +6,21 @@ exports[`renders error Badge correctly: enzyme.mount 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #607d8b;
+  background-color: #b0bec5;
   border-radius: 50px;
-  color: white;
+  color: #1a1818;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  font-size: 12px;
+  height: 24px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 16px;
+  text-transform: uppercase;
+  padding: 0 16px;
   width: auto;
 }
 
@@ -26,75 +29,58 @@ exports[`renders error Badge correctly: enzyme.mount 1`] = `
     theme={
       Object {
         "borders": Object {
-          "borderRadius": "3px",
-          "borderStandard": "1px solid",
-          "default": Object {
-            "borderRadius": "3px",
-            "borderStandard": "1px solid",
+          "default": "1 solid",
+          "radii": Object {
+            "m": 3,
+            "s": 0,
           },
         },
-        "palette": Object {
-          "active": Object {
-            "error": "#af0900",
-            "primary": "#4b626d",
-            "secondary": "#858585",
-            "success": "#487e0a",
-            "warning": "#ff5b07",
+        "colors": Object {
+          "button": Object {
+            "primary": Object {
+              "background": "#17384B",
+              "border": "#2C546C",
+              "color": "#FFFFFF",
+            },
+            "secondary": Object {
+              "background": "transparent",
+              "border": "#E9EEF2",
+              "color": "#D7DFE2",
+            },
           },
-          "disabled": Object {
-            "background": "#c4c4c4",
-            "border": "#b8b8b8",
-            "color": "#ffffff",
+          "common": Object {
+            "black": "#000000",
+            "white": "#FFFFFF",
           },
-          "error": "#e20c00",
-          "hover": Object {
-            "error": "#960800",
-            "primary": "#41545e",
-            "secondary": "#787878",
-            "success": "#3b6608",
-            "warning": "#ed5000",
+          "error": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
           },
-          "primary": Object {
-            "base": "#607d8b",
-            "dark10": "#4b626d",
-            "dark15": "#41545e",
-            "dark20": "#36474f",
-            "dark25": "#2c3940",
-            "dark5": "#566f7c",
-            "light10": "#7b96a3",
-            "light15": "#8aa2ae",
-            "light20": "#99aeb8",
-            "light25": "#a8bac3",
-            "light5": "#6b8a99",
+          "success": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
           },
-          "secondary": Object {
-            "base": "#9e9e9e",
-            "dark10": "#858585",
-            "dark15": "#787878",
-            "dark20": "#6b6b6b",
-            "dark25": "#5e5e5e",
-            "dark5": "#919191",
-            "light10": "#b8b8b8",
-            "light15": "#c4c4c4",
-            "light20": "#d1d1d1",
-            "light25": "#dedede",
-            "light5": "#ababab",
+          "warning": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
           },
-          "success": "#63ad0e",
-          "warning": "#ff7d3a",
         },
         "typography": Object {
-          "lineHeightMultiplier": Object {
-            "button": 2.6,
-          },
+          "family": "'Helvetica Neue', sans-serif",
           "size": Object {
             "l": 16,
             "m": 12,
             "s": 10,
-            "xl": 24,
+            "xl": 20,
             "xs": 8,
-            "xxl": 34,
-            "xxxl": 50,
+            "xxl": 24,
+            "xxxl": 34,
+            "xxxxl": 50,
+          },
+          "weight": Object {
+            "bold": 600,
+            "light": 100,
+            "regular": 300,
           },
         },
       }

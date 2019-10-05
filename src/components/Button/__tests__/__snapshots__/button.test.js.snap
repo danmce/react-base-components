@@ -11,7 +11,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   appearance: none;
   border: 0;
   border-radius: 1rem;
-  color: white;
+  color: #FFFFFF;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -22,24 +22,9 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  line-height: NaNpx;
   outline: none;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   width: auto;
-}
-
-.emotion-0:focus {
-  outline: none;
-}
-
-.emotion-0:disabled {
-  background-color: #17384B;
-  border: 1px solid #2C546C;
-  color: #FFFFFF;
-}
-
-.emotion-0:disabled:hover {
-  box-shadow: none;
 }
 
 <UXPinWrapper>
@@ -47,58 +32,53 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
     theme={
       Object {
         "borders": Object {
-          "borderRadius": "3px",
-          "borderStandard": "1px solid",
-          "default": Object {
-            "borderRadius": "3px",
-            "borderStandard": "1px solid",
+          "default": "1 solid",
+          "radii": Object {
+            "m": 3,
+            "s": 0,
           },
         },
         "colors": Object {
           "button": Object {
-            "error": Object {
-              "case": "none",
-              "fill": undefined,
-              "stroke": undefined,
-              "tint": "#FFFFFF",
-            },
             "primary": Object {
-              "case": "none",
-              "fill": "#17384B",
-              "stroke": "#2C546C",
-              "tint": "#FFFFFF",
+              "background": "#17384B",
+              "border": "#2C546C",
+              "color": "#FFFFFF",
             },
             "secondary": Object {
-              "case": "none",
-              "fill": "transparent",
-              "stroke": "#2C546C",
-              "tint": "#17384B",
+              "background": "transparent",
+              "border": "#E9EEF2",
+              "color": "#D7DFE2",
             },
-            "success": Object {
-              "case": "none",
-              "fill": undefined,
-              "stroke": undefined,
-              "tint": "#FFFFFF",
-            },
-            "warning": Object {
-              "case": "none",
-              "fill": undefined,
-              "stroke": undefined,
-              "tint": "#FFFFFF",
-            },
+          },
+          "common": Object {
+            "black": "#000000",
+            "white": "#FFFFFF",
+          },
+          "error": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
+          },
+          "success": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
+          },
+          "warning": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
           },
         },
         "typography": Object {
-          "fontFamily": "'Helvetica Neue', sans-serif",
-          "lineHeightMultiplier": Object {},
+          "family": "'Helvetica Neue', sans-serif",
           "size": Object {
             "l": 16,
             "m": 12,
             "s": 10,
-            "xl": 24,
+            "xl": 20,
             "xs": 8,
-            "xxl": 34,
-            "xxxl": 50,
+            "xxl": 24,
+            "xxxl": 34,
+            "xxxxl": 50,
           },
           "weight": Object {
             "bold": 600,
@@ -116,7 +96,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
       stretched={false}
       type="error"
     >
-      <ButtonStyles
+      <ButtonCommon
         disabled={false}
         mode="filled"
         size="xs"
@@ -132,7 +112,7 @@ exports[`renders error Button correctly: enzyme.mount 1`] = `
         >
           Test
         </button>
-      </ButtonStyles>
+      </ButtonCommon>
     </Button>
   </ThemeProvider>
 </UXPinWrapper>

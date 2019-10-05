@@ -1,20 +1,18 @@
 {
     "fontFamily": "'Helvetica Neue', sans-serif",
-    "lineHeightMultiplier": {
-        "button": 2.6
-    },
-    "size": {
-        "xs": 8,
-        "s": 10,
-        "m": 12,
-        "l": 16,
-        "xl": 24,
-        "xxl": 34,
-        "xxxl": 50
-    },
-    "weight": {
-        "light": 100,
-        "regular": 300,
-        "bold": 600
-    }
+    "fontSizes": [
+        8,
+        10,
+        12,
+        16,
+        20,
+        24,
+        34,
+        50
+    ],
+    "fontWeights": [
+        100,
+        300,
+        600
+    ]
 }

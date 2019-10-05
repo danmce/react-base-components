@@ -1,4 +1,13 @@
 {
-  "borderRadius": "3px",
-  "borderStandard": "1px solid"
+  "radii": [
+    0,
+    3,
+    5
+  ],
+  "borderWidths": [
+    1
+  ],
+  "borderStyles": [
+    "solid"
+  ]
 }

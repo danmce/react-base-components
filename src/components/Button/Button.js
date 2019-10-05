@@ -14,7 +14,6 @@ Button.propTypes = {
     'error',
     'warning'
   ]),
-  mode: PropTypes.oneOf(['filled', 'ghost', 'minimal', 'flat']),
   title: PropTypes.string,
   background: PropTypes.string,
   size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
@@ -24,7 +23,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   disabled: false,
-  mode: 'filled',
   size: 'm',
   stretched: true,
   type: 'primary'

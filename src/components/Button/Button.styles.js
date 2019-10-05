@@ -1,83 +1,59 @@
-import { css } from '@emotion/core'
 import styled from '@emotion/styled'
+import { darken } from '../../utils/colors'
+
+const ButtonCommon = styled.button`
+  align-items: center;
+  appearance: none;
+  background-color: ${props => backgroundSelector(props.theme, props.type)};
+  border: 0;
+  border-radius: 1rem;
+  color: ${props => textColorSelector(props.theme, props.type)};
+  cursor: pointer;
+  display: flex;
+  font-family: ${props => props.theme.typography.fontFamily};
+  font-size: ${props => `${sizeSelector(props.theme, props.size)}px`};
+  justify-content: center;
+  outline: none;
+  padding: 1rem 2rem;
+  width: ${props => (props.stretched ? '100%' : 'auto')};
+  &:hover {
+    background-color: ${props =>
+    backgroundSelector(props.theme, props.type, 'hover')};
+  }
+`
 
 const backgroundSelector = (theme, type, mode) => {
+  const color = theme.colors.button
   if (!mode) {
     switch (type) {
       case 'primary':
-        return theme.colors.button.primary.fill
+        return color.primary.background
       case 'secondary':
-        return theme.colors.button.secondary.fill
+        return color.secondary.background
       case 'success':
-        return theme.colors.button.success.fill
+        return theme.colors.success.fill
       case 'error':
-        return theme.colors.button.error.fill
+        return theme.colors.error.fill
       case 'warning':
-        return theme.colors.button.warning.fill
+        return theme.colors.warning.fill
       default:
-        return theme.colors.button.primary.fill
-    }
-  } else if (mode === 'active') {
-    // TODO
-    switch (type) {
-      case 'primary':
-        return theme.colors.button.primary.fill
-      case 'secondary':
-        return theme.colors.button.secondary.fill
-      case 'success':
-        return theme.colors.button.success.fill
-      case 'error':
-        return theme.colors.button.error.fill
-      case 'warning':
-        return theme.colors.button.warning.fill
-      default:
-        return theme.colors.button.primary.fill
+        return color.primary.background
     }
   } else if (mode === 'hover') {
-    // TODO
     switch (type) {
       case 'primary':
-        return theme.colors.button.primary.fill
+        return darken(color.primary.background, 0.5)
       case 'secondary':
-        return theme.colors.button.secondary.fill
+        return darken(color.secondary.background, 0.5)
       case 'success':
-        return theme.colors.button.success.fill
+        return darken(theme.colors.success.fill, 0.5)
       case 'error':
-        return theme.colors.button.error.fill
+        return darken(theme.colors.error.fill, 0.5)
       case 'warning':
-        return theme.colors.button.warning.fill
+        return darken(theme.colors.warning.fill, 0.5)
       default:
-        return theme.colors.button.primary.fill
+        return darken(color.primary.background, 0.5)
     }
-  }
-}
-
-const modes = (theme, type, mode) => {
-  // TODO
-  if (mode === 'ghost') {
-    return css`
-      background-color: none;
-      color: ${type !== 'secondary'
-    ? backgroundSelector(theme, type)
-    : theme.colors.button.primary.fill};
-      svg {
-        fill: ${type !== 'secondary'
-    ? backgroundSelector(theme, type)
-    : theme.colors.button.primary.fill};
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        color: ${type !== 'secondary'
-    ? 'white'
-    : theme.colors.button.primary.fill};
-        svg {
-          fill: ${type !== 'secondary'
-    ? 'white'
-    : theme.colors.button.primary.fill};
-        }
-      }
-    `
   }
 }
 
@@ -102,54 +78,22 @@ const sizeSelector = (theme, size) => {
   }
 }
 
-const ButtonCommon = styled.button`
-  align-items: center;
-  appearance: none;
-  background-color: ${props => backgroundSelector(props.theme, props.type)};
-  border: 0;
-  border-radius: 1rem;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  font-size: ${props => `${sizeSelector(props.theme, props.size)}px`};
-  justify-content: center;
-  line-height: ${props =>
-    `${sizeSelector(props.theme, props.size) *
-      props.theme.typography.lineHeightMultiplier.button}px}`};
-  outline: none;
-  padding: 2rem 4rem;
-  width: ${props => (props.stretched ? '100%' : 'auto')};
-  &:hover {
-    background-color: ${props =>
-    backgroundSelector(props.theme, props.type, 'hover')};
+const textColorSelector = (theme, type) => {
+  const color = theme.colors.button
+  switch (type) {
+    case 'primary':
+      return color.primary.color
+    case 'secondary':
+      return color.secondary.color
+    case 'success':
+      return theme.colors.success.contrast
+    case 'error':
+      return theme.colors.error.contrast
+    case 'warning':
+      return theme.colors.warning.contrast
+    default:
+      return color.primary.color
   }
-  &:focus {
-    outline: none;
-    background-color: ${props =>
-    backgroundSelector(props.theme, props.type, 'active')};
-  }
-  &:active {
-    background-color: ${props =>
-    backgroundSelector(props.theme, props.type, 'active')};
-  }
-  &:disabled {
-    ${props => {
-    // TODO
-    return `
-          background-color: ${props.theme.colors.button.primary.fill};
-          border: ${props.theme.borders.borderStandard}
-            ${props.theme.colors.button.primary.stroke};
-          color: ${props.theme.colors.button.primary.tint};
-        `
-  }}
-    &:hover {
-      box-shadow: none;
-    }
-  }
-`
+}
 
-const ButtonStyles = styled(ButtonCommon)`
-  ${props => modes(props.theme, props.type, props.mode)};
-`
-
-export default ButtonStyles
+export default ButtonCommon

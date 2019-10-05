@@ -5,7 +5,7 @@ exports[`renders Typography correctly: enzyme.mount 1`] = `
   color: #f00;
   font-weight: bold;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .emotion-2 {
@@ -25,39 +25,54 @@ exports[`renders Typography correctly: enzyme.mount 1`] = `
   <ThemeProvider
     theme={
       Object {
+        "borders": Object {
+          "default": "1 solid",
+          "radii": Object {
+            "m": 3,
+            "s": 0,
+          },
+        },
         "colors": Object {
           "button": Object {
             "primary": Object {
-              "case": "none",
-              "fill": "#17384B",
-              "stroke": "#2C546C",
-              "tint": "#FFFFFF",
+              "background": "#17384B",
+              "border": "#2C546C",
+              "color": "#FFFFFF",
             },
             "secondary": Object {
-              "case": "none",
-              "fill": "transparent",
-              "stroke": "#2C546C",
-              "tint": "#17384B",
+              "background": "transparent",
+              "border": "#E9EEF2",
+              "color": "#D7DFE2",
             },
-            "success": Object {
-              "case": "none",
-              "fill": undefined,
-              "stroke": undefined,
-              "tint": "#FFFFFF",
-            },
+          },
+          "common": Object {
+            "black": "#000000",
+            "white": "#FFFFFF",
+          },
+          "error": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
+          },
+          "success": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
+          },
+          "warning": Object {
+            "contrast": "#FFFFFF",
+            "fill": undefined,
           },
         },
         "typography": Object {
-          "fontFamily": "'Helvetica Neue', sans-serif",
-          "lineHeightDivider": Object {},
+          "family": "'Helvetica Neue', sans-serif",
           "size": Object {
             "l": 16,
             "m": 12,
             "s": 10,
-            "xl": 24,
+            "xl": 20,
             "xs": 8,
-            "xxl": 34,
-            "xxxl": 50,
+            "xxl": 24,
+            "xxxl": 34,
+            "xxxxl": 50,
           },
           "weight": Object {
             "bold": 600,

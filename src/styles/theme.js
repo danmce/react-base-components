@@ -4,46 +4,60 @@ import * as typography from './typography.json'
 
 export default {
   borders: {
-    ...borders
+    radii: {
+      s: borders.radii[0],
+      m: borders.radii[1]
+    },
+    size: {
+      s: `${borders.borderWidth[0]} ${borders.borderStyle[0]}`
+    }
   },
   colors: {
     button: {
       primary: {
-        fill: colors.n_500,
-        stroke: colors.n_300,
-        tint: colors.white,
-        case: 'none'
+        background: colors.n_500,
+        border: colors.n_300,
+        color: colors.white
       },
       secondary: {
-        fill: 'transparent',
-        stroke: colors.n_300,
-        tint: colors.n_500,
-        case: 'none'
-      },
-      success: {
-        fill: colors.green_500,
-        stroke: colors.green_300,
-        tint: colors.white,
-        case: 'none'
-      },
-      error: {
-        fill: colors.red_500,
-        stroke: colors.red_300,
-        tint: colors.white,
-        case: 'none'
-      },
-      warning: {
-        fill: colors.yellow_500,
-        stroke: colors.yellow_300,
-        tint: colors.white,
-        case: 'none'
+        background: 'transparent',
+        border: colors.n_30,
+        color: colors.n_50
       }
+    },
+    common: {
+      black: colors.black,
+      white: colors.white
+    },
+    error: {
+      contrast: colors.white,
+      fill: colors.red_500
+    },
+    success: {
+      contrast: colors.white,
+      fill: colors.green_500
+    },
+    warning: {
+      contrast: colors.white,
+      fill: colors.yellow_500
     }
   },
   typography: {
-    fontFamily: typography.fontFamily,
-    lineHeightMultiplier: { ...typography.lineHeightDivider },
-    size: { ...typography.size },
-    weight: { ...typography.weight }
+    family: typography.fontFamily,
+    size: {
+      xs: typography.fontSizes[0],
+      s: typography.fontSizes[1],
+      m: typography.fontSizes[2],
+      l: typography.fontSizes[3],
+      xl: typography.fontSizes[4],
+      xxl: typography.fontSizes[5],
+      xxxl: typography.fontSizes[6],
+      xxxxl: typography.fontSizes[7]
+    },
+    weight: {
+      light: typography.fontWeights[0],
+      regular: typography.fontWeights[1],
+      bold: typography.fontWeights[2]
+    }
   }
 }
