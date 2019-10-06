@@ -9,20 +9,20 @@ export default {
       m: borders.radii[1]
     },
     size: {
-      s: `${borders.borderWidth[0]} ${borders.borderStyle[0]}`
+      s: `${borders.borderWidths[0]} ${borders.borderStyles[0]}`
     }
   },
   colors: {
     button: {
       primary: {
         background: colors.n_500,
-        border: colors.n_300,
+        border: colors.n_500,
         color: colors.white
       },
       secondary: {
         background: 'transparent',
-        border: colors.n_30,
-        color: colors.n_50
+        border: colors.n_500,
+        color: colors.n_500
       }
     },
     common: {
@@ -31,15 +31,15 @@ export default {
     },
     error: {
       contrast: colors.white,
-      fill: colors.red_500
+      fill: colors.red_90
     },
     success: {
       contrast: colors.white,
-      fill: colors.green_500
+      fill: colors.green_90
     },
     warning: {
       contrast: colors.white,
-      fill: colors.yellow_500
+      fill: colors.yellow_90
     }
   },
   typography: {
