@@ -16,14 +16,12 @@ Button.propTypes = {
   ]),
   title: PropTypes.string,
   background: PropTypes.string,
-  size: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']),
   stretched: PropTypes.bool,
   children: PropTypes.string
 }
 
 Button.defaultProps = {
   disabled: false,
-  size: 'm',
   stretched: true,
   type: 'primary'
 }

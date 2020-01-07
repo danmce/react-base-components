@@ -12,7 +12,7 @@ const ButtonCommon = styled.button`
   cursor: pointer;
   display: flex;
   font-family: ${props => props.theme.typography.fontFamily};
-  font-size: ${props => `${sizeSelector(props.theme, props.size)}px`};
+  font-size: ${props => props.theme.typography.size.l}px;
   justify-content: center;
   outline: none;
   padding: 1rem 2rem;
@@ -96,27 +96,6 @@ const borderSelector = (theme, type, mode) => {
       default:
         return darken(color.primary.border, 0.2)
     }
-  }
-}
-
-const sizeSelector = (theme, size) => {
-  switch (size) {
-    case 'xs':
-      return theme.typography.size.xs
-    case 's':
-      return theme.typography.size.s
-    case 'm':
-      return theme.typography.size.m
-    case 'l':
-      return theme.typography.size.l
-    case 'xl':
-      return theme.typography.size.xl
-    case 'xxl':
-      return theme.typography.size.xxl
-    case 'xxxl':
-      return theme.typography.size.xxxl
-    default:
-      return theme.typography.size.m
   }
 }
 

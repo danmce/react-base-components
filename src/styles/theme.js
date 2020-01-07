@@ -9,7 +9,7 @@ export default {
       m: borders.radii[1]
     },
     size: {
-      s: `${borders.borderWidths[0]} ${borders.borderStyles[0]}`
+      s: `${borders.borderWidths[0]}px ${borders.borderStyles[0]}`
     }
   },
   colors: {
